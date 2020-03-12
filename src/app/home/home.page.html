@@ -1,0 +1,75 @@
+
+
+<ion-toolbar class="new-bg-color">
+  <ion-buttons slot="end">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+
+  </ion-buttons>
+  
+  <ion-title color="light">Resto-Bar</ion-title>
+</ion-toolbar>
+
+<ion-content>
+
+  <ion-slides [options]="slideOptsOne" class="slide-padding" pager="false">
+    <ion-slide *ngFor="let story of topStories">
+      <div class="container">
+        <ion-img src="{{story.picture}}"></ion-img>
+        <h2 class="slidetitle">
+          <span class="block">{{story.title}}</span>
+        </h2>
+        <p class="author">By {{story.author}}, 2h ago</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="sub-headers">
+    <h3>Categories</h3>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card (click)="menu(1)">
+          <img src="./assets/1.jpg" />
+          <ion-card-header>
+            <ion-card-title>Veg</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col width-50>
+        <ion-card (click)="menu(2)">
+          <img src="./assets/1.jpg" />
+          <ion-card-header>
+            <ion-card-title>Non-Veg</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card (click)="menu(3)">
+          <img src="./assets/1.jpg" />
+          <ion-card-header>
+            <ion-card-title>Snacks</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    
+      <ion-col width-50>
+        <ion-card>
+          <img src="./assets/1.jpg" />
+          <ion-card-header>
+            <ion-card-title>Burger</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    
+      
+  </ion-grid>
+
+
+</ion-content>
+
+
