@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -9,6 +10,10 @@ const routes: Routes = [
   {
     path : "menu/:id",
     component : MenuComponent
+  },
+  {
+    path : "submenu/:id",
+    component : SubMenuComponent
   }
   
 ];
